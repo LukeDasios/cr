@@ -6,7 +6,7 @@ const TWILIO_PHONE_NUMBER = process.env.PHONE_NUMBER
 const client = require("twilio")(accountSid, authToken)
 
 let garbageWeek = true
-const theBoys = ["Luke", "Duncan", "Sam", "Jp"]
+const theBoys = ["Luke", "Dunk", "Sam", "Paula"]
 const numbers = ["+16479385063", "+14168261333", "+14168447692", "+14166169331"]
 let iter = 3
 
@@ -20,7 +20,7 @@ app.listen(port, () => {
     from: TWILIO_PHONE_NUMBER,
     to: "+16479385063",
   })
-  setTimeout(tuesdayMessage, 85800000)
+  setTimeout(tuesdayMessage, 84600000)
 })
 
 app.get("/", (req, res) => {
@@ -84,5 +84,3 @@ function whoIsNext(num) {
     return theBoys[num + 1]
   }
 }
-
-
